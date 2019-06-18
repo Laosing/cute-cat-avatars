@@ -1,4 +1,7 @@
+[![Build Status](https://travis-ci.org/Laosing/cute-cat-avatars.svg?branch=master)](https://travis-ci.org/Laosing/cute-cat-avatars)
+
 ![](https://raw.githubusercontent.com/Laosing/cute-cat-avatars/master/assets/png/banner.png)
+
 
 # Cute Cat Avatars
 An illustrated cat collection for cat lovers
