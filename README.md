@@ -26,6 +26,9 @@ The same seed will always return the same cat:
 ```
 api/v1/:seed
 ```
+```
+api/v1/12
+```
 You can query a specific cat or a random cat.
 ```
 /api/v1/announcer
