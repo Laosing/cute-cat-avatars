@@ -9,7 +9,7 @@
     "start": "node dist",
     "prestart": "npm run -s build",
     "lint": "eslint src",
-    "test": "mocha -R spec --require babel-core/register test/*-spec.js",
+    "test": "mocha -R spec --require babel-core/register test/*-spec.js --exit",
     "watch": "npm test -- --watch"
   },
   "pre-commit": "npm test",

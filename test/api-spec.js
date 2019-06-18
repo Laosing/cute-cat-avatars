@@ -10,7 +10,7 @@ describe("API tests", () => {
     let server
 
     before(() => {
-        server = app.listen(8080)
+        server = app.listen()
     })
 
     after(() => {
@@ -18,7 +18,7 @@ describe("API tests", () => {
     })
 
     it("should return the api version on /api", (done) => {
-        chai.request(app)
+        chai.request(server)
             .get('/api')
             .end((err, res) => {
                 expect(res.body).to.be.a('Object')
@@ -29,7 +29,7 @@ describe("API tests", () => {
     })
 
     it("should 404 when requested cat name doesn't exist", (done) => {
-        chai.request(app)
+        chai.request(server)
             .get('/api/v1/hello')
             .end((err, res) => {
                 expect(res.status).to.equal(404)
@@ -38,7 +38,7 @@ describe("API tests", () => {
     })
 
     it('requesting a cat name should return a cat svg', (done) => {
-        chai.request(app)
+        chai.request(server)
             .get('/api/v1/book')
             .end((err, res) => {
                 expect(res.headers['content-type']).to.equal('image/svg+xml')
@@ -48,7 +48,7 @@ describe("API tests", () => {
     })
 
     it('requesting any number should return a cat svg', (done) => {
-        chai.request(app)
+        chai.request(server)
             .get('/api/v1/0')
             .end((err, res) => {
                 expect(res.headers['content-type']).to.equal('image/svg+xml')
