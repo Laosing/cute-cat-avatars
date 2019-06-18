@@ -63,7 +63,9 @@ You can query a specific cat or a random cat.
 ### Built With
 * [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
 * [Node.js](https://nodejs.org/) - JavaScript on the Server
-* [Heroku](https://www.heroku.com/) - Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+* [Mocha](https://mochajs.org/) - JavaScript test framework for Node.js programs
+* [Heroku](https://www.heroku.com/) - Operate applications entirely in the cloud.
+* [TravisCI](https://travis-ci.org/) - Test and Deploy with Confidence
 
 
 ### License
