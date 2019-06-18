@@ -1,12 +1,12 @@
 ![](https://raw.githubusercontent.com/Laosing/cute-cat-avatars/master/assets/png/banner.png)
 
-# cute cats
+# Cute Cat Avatars
 An illustrated cat collection for cat lovers
 
 ---
 
 ### What is this?
-Cute cats are colorful cats illustrated by [Drew Rattana](http://andrewrattana.com) that can be used as profile picture placeholders for live websites or design mock ups.
+Cute Cat Avatars are colorful cats illustrated by [Drew Rattana](http://andrewrattana.com) that can be used as profile picture placeholders for live websites or design mock ups.
 
 ### How to use
 You can easily use these cats in img tags or http requests, the response will be a cat in `Content-Type: image/svg+xml`. The url to request is https://cute-cat-avatars.herokuapp.com/api/v1/:seed for example:
