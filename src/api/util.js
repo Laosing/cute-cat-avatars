@@ -29,6 +29,6 @@ export function getCatRoute(req) {
 /**	Converts the cat array data into our routes /api/{version}/{route}
  *	@param {string} apiVersion	the api version
  */
-export function routes(apiVersion) {
-	return cats.map(route => `${apiVersion}/${route}`)
+export function routes() {
+	return cats.map(route => `/${route}`)
 }

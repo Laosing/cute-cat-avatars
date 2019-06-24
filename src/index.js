@@ -1,4 +1,3 @@
-import http from 'http';
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
@@ -7,7 +6,6 @@ import api from './api';
 import config from './config.json';
 
 let app = express();
-app.server = http.createServer(app);
 
 // logger
 app.use(morgan('dev'));
@@ -22,8 +20,8 @@ app.use(bodyParser.json({
 // api router
 app.use('/api', api({ config }));
 
-app.server.listen(process.env.PORT || config.port, () => {
-	console.log(`Started on port ${app.server.address().port}`);
+let server = app.listen(process.env.PORT || config.port, () => {
+	console.log(`Started on port ${server.address().port}`);
 });
 
-export default app;
+export { app, server };
