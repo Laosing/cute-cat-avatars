@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/Laosing/cute-cat-avatars/master/assets/png/banner.png)
 
 
-# Cute Cat Avatars [![Build Status](https://travis-ci.org/Laosing/cute-cat-avatars.svg?branch=master)](https://travis-ci.org/Laosing/cute-cat-avatars)
+# Cute Cat Avatars [![Build Status](https://travis-ci.org/Laosing/cute-cat-avatars.svg?branch=master)](https://travis-ci.org/Laosing/cute-cat-avatars) [![dependencies Status](https://david-dm.org/Laosing/cute-cat-avatars/status.svg)](https://david-dm.org/Laosing/cute-cat-avatars) [![devDependencies Status](https://david-dm.org/Laosing/cute-cat-avatars/dev-status.svg)](https://david-dm.org/Laosing/cute-cat-avatars?type=dev)
 An illustrated cat collection for cat lovers
 
 ---
