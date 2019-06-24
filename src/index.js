@@ -17,6 +17,13 @@ app.use(bodyParser.json({
 	limit : config.bodyLimit
 }));
 
+// Set all asset directories to /static/dist/*
+app.use('/static', express.static('assets'))
+
+app.get('/', function(req, res) {
+	res.sendFile(__dirname + '/views/index.html')
+})
+
 // api router
 app.use('/api', api({ config }));
 

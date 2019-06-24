@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/dist/css/styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/img/favicon/site.webmanifest">
+
+    <title>Cute Cat Avatars | An illustrated cat collection for cat lovers.</title>
+</head>
+<body>
+    <div class="banner mb-3">
+        <img src="static/img/banner.png" title="" class="w-100">
+    </div>
+    <main id="main" class="pt-5">
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <section class="text-center w-100 mb-100">
+                        <div class="container">
+                            <h1 class="text-bold mb-3 mt-5 font-size-60">Cute Cat Avatars</h1>
+                            <h5 class="text-gray-soft text-regular">An illustrated cat collection for cat lovers.</h5>
+                        </div>
+                    </section>
+                    <section class="section pt-3 pb-0">
+                        <hr>
+                        <div class="container">
+                            <div class="row align-items-center justify-content-between py-4 ">
+                                <div class="col-xl-5 col-lg-6 pt-4">
+                                    <h2 class="mb-2 text-bold w-75">What is this?</h2>
+                                    <p class="fs-16 text-gray-soft">Cute Cat Avatars are colorful cats illustrated by <a class="text-primary" href="http://andrewrattana.com">Drew Rattana</a> that can be used as profile picture placeholders for live websites or design mock ups. Made in SVG format for a crisp image with super fast load times on every device.</p>
+                                </div>
+                                <div class="col-lg-12 mb-5">
+                                    <img class="img-fluid mx-auto" src="static/img/what-is-this.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-light py-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6 col-12 mb-4">
+                        <h2 class="mb-2 text-bold w-75">How to use</h2>
+                        <p class="fs-16 text-gray-soft">You can easily use these cats in img tags or http requests, the response will be a cat in <span class="text-primary">Content-Type: image/svg+xml</span>. The url to request is <span class="text-primary">https://cute-cat-avatars.herokuapp.com/api/v1/:seed</span> for example:</p>
+                    </div>
+                    <div class="col-12">
+                        <h5>HTML</h5>
+<pre><code>&lt;img src=&quot;https://cute-cat-avatars.herokuapp.com/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
+                        <h5>Javascript</h5>
+<pre><code>fetch('https://cute-cat-avatars.herokuapp.com/api/v1/random')
+    .then(function(response) {
+        document.getElementById('cat').src = response.url;
+    })</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
+                        <div class="col-sm-4 px-sm-4 pb-5">
+                            <img class="w-100" src="static/img/award.png">
+                            <h5 class="my-2 text-bold">Extremely cute</h5>
+                            <p class="text-gray-soft">Each cat is unique and easily distinguishable.</p>
+                        </div>
+                        <div class="col-sm-4 px-sm-4 pb-5">
+                            <img class="w-100 img-fluid" src="static/img/groups.png">
+                            <h5 class="my-2 text-bold">Tons of variety</h5>
+                            <p class="text-gray-soft">There are 14 cats in total, you'll be sure to find one that suits you.</p>
+                        </div>
+                        <div class="col-sm-4 px-sm-4 pb-5">
+                            <img class="w-100 img-fluid" src="static/img/art.png">
+                            <h5 class="my-2 text-bold">Free to use </h5>
+                            <p class="text-gray-soft">These cats are free to use in both personal and commercial projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-gray-light py-1">
+                <div class="container">
+                    <div class="row align-items-top justify-content-between mt-5 my-lg-5 pt-5">
+                        <div class="col-lg-4 col-12 mb-4 mt-4"><img class="img-fluid mx-auto d-block" src="static/img/logo.png" class="w-100 img-fluid"></div>
+                        <div class="col-lg-8 col-12 mb-3 mb-lg-5">
+                            <h2 class="mb-2 text-bold w-75">Pick your cat</h2>
+                            <p class="fs-16 text-gray-soft mb-5">There are multiple ways you can query for a cute cat. The same <span class="text-primary">:seed</span> will always return the same cat.</p>
+                            <div class="row align-items-center mb-3">
+                                <div class="col-4 text-right">Get a cat by :seed</div>
+                                <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">4</span></pre></div>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <div class="col-4 text-right">Get a cat by name</div>
+                                <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">announcer</span></pre></div>
+                            </div>
+                            <div class="row align-items-center mb-3">
+                                <div class="col-4 text-right">Get a random cat</div>
+                                <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">random</span></pre></div>
+                            </div>
+                            <p class="mt-50 text-center"><a class="btn btn-primary btn-lg px-40" href="https://github.com/Laosing/cute-cat-avatars">View on Github</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
+                        <div class="col-12">
+                            <h2 class="my-2 text-bold">Try them all</h2>
+                            <div class="row align-items-center mb-5 pt-5 mb-lg-3 text-center">
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/announcer.png">
+                                    <strong>announcer</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/art.png">
+                                    <strong>art</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/award.png">
+                                    <strong>award</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/book.png">
+                                    <strong>book</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/bug.png">
+                                    <strong>bug</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/cat.png">
+                                    <strong>cat</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/comic.png">
+                                    <strong>comic</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/gaming.png">
+                                    <strong>gaming</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/general.png">
+                                    <strong>general</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/groups.png">
+                                    <strong>groups</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/idea.png">
+                                    <strong>idea</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/news.png">
+                                    <strong>news</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/support.png">
+                                    <strong>support</strong>
+                                </div>
+                                <div class="col-6 col-md-2 mb-4">
+                                    <img class="w-100 img-fluid" src="static/img/tv.png">
+                                    <strong>tv</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
+                        <div class="col-12">
+                            <footer class="font-size-12">
+                                <p>This was made by <a class="text-primary" href="http://andrewrattana.com">Drew Rattana</a>.</p>
+                                <p>For questions or other inquiries, email andrewrattana@gmail.com</p>
+                                <p>Free for personal and commercial use.</p>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+    </html>

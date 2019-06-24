@@ -1,7 +1,7 @@
 import cats from '../models/cats';
 import path from 'path';
 
-const assetsDir = '../../assets/';
+const assetsDir = '../../assets/img/api/';
 
 /**	Gets the cat file based on the inputted id
  *	@param {number} id	Cat id
