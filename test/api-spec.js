@@ -1,3 +1,4 @@
+
 import { expect } from 'chai'
 import { app, server } from '../src/index'
 import supertest from 'supertest'
@@ -49,6 +50,12 @@ describe("API tests", () => {
 
     it('requesting a number within the cat array should return a cat svg', async () => {
         const res = await supertest(app).get('/api/v1/4')
+        expect(res.headers['content-type']).to.equal('image/svg+xml')
+        expect(res.status).to.equal(200)
+    })
+
+    it('requesting random should return a random cat svg', async () => {
+        const res = await supertest(app).get('/api/v1/random')
         expect(res.headers['content-type']).to.equal('image/svg+xml')
         expect(res.status).to.equal(200)
     })
