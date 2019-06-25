@@ -1330,11 +1330,6 @@ a.text-primary:hover {
 section {
   width: 100%; }
 
-.banner {
-  max-width: none;
-  width: 150%;
-  margin-left: -25%; }
-
 pre {
   background-color: #f6f8fa;
   border-radius: 3px;
