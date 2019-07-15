@@ -15,19 +15,10 @@ describe("API tests", () => {
         expect(res.status).to.equal(200)
     })
 
-    it("should 404 when requested cat name doesn't exist", async () => {
-        const res = await supertest(app).get('/api/v1/hello')
-        expect(res.status).to.equal(404)
-    })
-
-    it("should 404 when request has numbers and letters", async () => {
-        const res = await supertest(app).get('/api/v1/hello41241')
-        expect(res.status).to.equal(404)
-    })
-
-    it("should 404 when request has letters and numbers", async () => {
-        const res = await supertest(app).get('/api/v1/014hello')
-        expect(res.status).to.equal(404)
+    it("should get a random cat by the length of the string when requested cat name doesn't exist", async () => {
+        const res = await supertest(app).get('/api/v1/24141}{}@$@$!fasfafas')
+        expect(res.headers['content-type']).to.equal('image/svg+xml')
+        expect(res.status).to.equal(200)
     })
 
     it('requesting a cat name should return a cat svg', async () => {
