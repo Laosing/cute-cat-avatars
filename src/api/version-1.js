@@ -32,8 +32,11 @@ export default () => {
             let index = cats.indexOf(path)
             cat = getCat(index);
         }
-        if(!isNaN(Number(path))) {
+        else if(!isNaN(Number(path))) {
             cat = getCat(path)
+        }
+        else {
+            cat = getCat(path.length)
         }
         return cat ? res.sendFile(cat) : res.sendStatus(404);
 	});
