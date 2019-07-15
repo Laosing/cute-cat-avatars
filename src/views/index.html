@@ -14,6 +14,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="static/img/favicon/site.webmanifest">
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
     <title>Cute Cat Avatars | An illustrated cat collection for cat lovers.</title>
 </head>
 <body>
@@ -57,12 +60,12 @@
                     </div>
                     <div class="col-12">
                         <h5>HTML</h5>
-<pre><code>&lt;img src=&quot;https://cute-cat-avatars.herokuapp.com/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
+                        <pre><code>&lt;img src=&quot;https://cute-cat-avatars.herokuapp.com/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
                         <h5>Javascript</h5>
-<pre><code>fetch('https://cute-cat-avatars.herokuapp.com/api/v1/random')
-    .then(function(response) {
-        document.getElementById('cat').src = response.url;
-    })</code></pre>
+                        <pre><code>fetch('https://cute-cat-avatars.herokuapp.com/api/v1/random')
+                            .then(function(response) {
+                                document.getElementById('cat').src = response.url;
+                            })</code></pre>
                         </div>
                     </div>
                 </div>
@@ -117,90 +120,108 @@
 
             <section>
                 <div class="container">
-                    <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
-                        <div class="col-12">
-                            <h2 class="my-2 text-bold">Try them all</h2>
-                            <div class="row align-items-center mb-5 pt-5 mb-lg-3 text-center">
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/announcer.svg">
-                                    <strong>announcer</strong>
+                    <div class="row align-items-center mt-5" id="cat">
+                        <div class="col-12 col-md-8">
+                            <h2 class="my-2 text-bold">Test it out!</h2>
+                            <div class="input-container">
+                                <label for="basic-url">Type in a cat to see how it works</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">https://cute-cat-avatars.herokuapp.com/api/v1/</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="basic-url" value="award" @keyup="getCat" placeholder="<seed>" class="cat-input">
+                                    </div>
                                 </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/art.svg">
-                                    <strong>art</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/award.svg">
-                                    <strong>award</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/book.svg">
-                                    <strong>book</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/bug.svg">
-                                    <strong>bug</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/cat.svg">
-                                    <strong>cat</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/comic.svg">
-                                    <strong>comic</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/gaming.svg">
-                                    <strong>gaming</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/general.svg">
-                                    <strong>general</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/groups.svg">
-                                    <strong>groups</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/idea.svg">
-                                    <strong>idea</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/news.svg">
-                                    <strong>news</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/support.svg">
-                                    <strong>support</strong>
-                                </div>
-                                <div class="col-6 col-md-2 mb-4">
-                                    <img class="w-100 img-fluid" src="static/img/api/tv.svg">
-                                    <strong>tv</strong>
+                            </div>
+                            <div class="col">
+                                <div v-html="catSrc"></div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
+                            <div class="col-12">
+                                <h2 class="my-2 text-bold">Try them all</h2>
+                                <div class="row align-items-center mb-5 pt-5 mb-lg-3 text-center">
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/announcer.svg">
+                                        <strong>announcer</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/art.svg">
+                                        <strong>art</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/award.svg">
+                                        <strong>award</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/book.svg">
+                                        <strong>book</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/bug.svg">
+                                        <strong>bug</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/cat.svg">
+                                        <strong>cat</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/comic.svg">
+                                        <strong>comic</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/gaming.svg">
+                                        <strong>gaming</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/general.svg">
+                                        <strong>general</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/groups.svg">
+                                        <strong>groups</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/idea.svg">
+                                        <strong>idea</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/news.svg">
+                                        <strong>news</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/support.svg">
+                                        <strong>support</strong>
+                                    </div>
+                                    <div class="col-6 col-md-2 mb-4">
+                                        <img class="w-100 img-fluid" src="static/img/api/tv.svg">
+                                        <strong>tv</strong>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section>
-                <div class="container">
-                    <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
-                        <div class="col-12">
-                            <footer class="font-size-12">
-                                <p>This was made by <a class="text-primary" href="http://andrewrattana.com">Drew Rattana</a>.</p>
-                                <p>For questions or other inquiries, email andrewrattana@gmail.com</p>
-                                <p>Free for personal and commercial use.</p>
-                            </footer>
+                <section>
+                    <div class="container">
+                        <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
+                            <div class="col-12">
+                                <footer class="font-size-12">
+                                    <p>This was made by <a class="text-primary" href="http://andrewrattana.com">Drew Rattana</a>.</p>
+                                    <p>For questions or other inquiries, email andrewrattana@gmail.com</p>
+                                    <p>Free for personal and commercial use.</p>
+                                </footer>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-        </main>
+            </main>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
-    </html>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="static/dist/js/cat.js"></script>
+        </body>
+        </html>
