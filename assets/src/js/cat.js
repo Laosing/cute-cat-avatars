@@ -23,7 +23,7 @@ const cat = new Vue({
     },
     methods: {
         getCat(e) {
-            const value = e.target.value
+            const value = e.target.value.trim()
             if(value === '') return;
 
             if(value === 'random') {
