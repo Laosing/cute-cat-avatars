@@ -26,9 +26,7 @@ You can easily use these cats in img tags or http requests, the response will be
 #### Javascript
 
 ```javascript
-fetch("https://cute-cat-avatars.fly.dev/api/v1/random").then(function (
-  response
-) {
+fetch("https://cute-cat-avatars.fly.dev/api/v1/cat").then(function (response) {
   document.getElementById("cat").src = response.url
 })
 ```
@@ -48,14 +46,14 @@ api/v1/:seed
 api/v1/12
 ```
 
-You can query a specific cat or a random cat.
+You can query a specific cat or a string to get a random cat.
 
 ```
 /api/v1/announcer
 ```
 
 ```
-/api/v1/random
+/api/v1/!@#$%
 ```
 
 ### Try them all!

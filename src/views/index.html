@@ -56,13 +56,13 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6 col-12 mb-4">
                         <h2 class="mb-2 text-bold w-75">How to use</h2>
-                        <p class="fs-16 text-gray-soft">You can easily use these cats in img tags or http requests, the response will be a cat in <span class="text-primary">Content-Type: image/svg+xml</span>. The url to request is <span class="text-primary">https://cute-cat-avatars.herokuapp.com/api/v1/:seed</span> for example:</p>
+                        <p class="fs-16 text-gray-soft">You can easily use these cats in img tags or http requests, the response will be a cat in <span class="text-primary">Content-Type: image/svg+xml</span>. The url to request is <span class="text-primary">https://cute-cat-avatars.fly.dev/api/v1/:seed</span> for example:</p>
                     </div>
                     <div class="col-12">
                         <h5>HTML</h5>
-                        <pre><code>&lt;img src=&quot;https://cute-cat-avatars.herokuapp.com/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
+                        <pre><code>&lt;img src=&quot;https://cute-cat-avatars.fly.dev/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
                         <h5>Javascript</h5>
-                        <pre><code>fetch('https://cute-cat-avatars.herokuapp.com/api/v1/random')
+                        <pre><code>fetch('https://cute-cat-avatars.fly.dev/api/v1/random')
     .then(function(response) {
         document.getElementById('cat').src = response.url;
     })</code></pre>
@@ -109,8 +109,8 @@
                                 <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">announcer</span></pre></div>
                             </div>
                             <div class="row align-items-center mb-3">
-                                <div class="col-4 text-right">Get a random cat</div>
-                                <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">random</span></pre></div>
+                                <div class="col-4 text-right">Use any characters</div>
+                                <div class="col-8 col-lg-6"><pre class="mb-0">api/v1/<span class="text-primary">!@#$%</span></pre></div>
                             </div>
                             <p class="mt-50 text-center"><a class="btn btn-primary btn-lg px-40" href="https://github.com/Laosing/cute-cat-avatars">View on Github</a></p>
                         </div>
@@ -127,7 +127,7 @@
                                 <label for="basic-url">Type in a cat to see how it works</label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">https://cute-cat-avatars.herokuapp.com/api/v1/</span>
+                                        <span class="input-group-text" id="basic-addon3">https://cute-cat-avatars.fly.dev/api/v1/</span>
                                     </div>
                                     <input type="text" class="form-control" id="basic-url" value="award" @keyup="getCat" placeholder="<seed>" class="cat-input">
                                     </div>
