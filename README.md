@@ -12,13 +12,13 @@ Cute Cat Avatars are colorful cats illustrated by [Drew Rattana](http://andrewra
 
 ### How to use
 
-You can easily use these cats in img tags or http requests, the response will be a cat in `Content-Type: image/svg+xml`. The url to request is https://cute-cat-avatars.herokuapp.com/api/v1/:seed for example:
+You can easily use these cats in img tags or http requests, the response will be a cat in `Content-Type: image/svg+xml`. The url to request is https://cute-cat-avatars.fly.dev/api/v1/:seed for example:
 
 #### HTML
 
 ```html
 <img
-  src="https://cute-cat-avatars.herokuapp.com/api/v1/announcer"
+  src="https://cute-cat-avatars.fly.dev/api/v1/announcer"
   alt="Cute announcer cat"
 />
 ```
@@ -26,7 +26,7 @@ You can easily use these cats in img tags or http requests, the response will be
 #### Javascript
 
 ```javascript
-fetch("https://cute-cat-avatars.herokuapp.com/api/v1/random").then(function (
+fetch("https://cute-cat-avatars.fly.dev/api/v1/random").then(function (
   response
 ) {
   document.getElementById("cat").src = response.url
