@@ -1,18 +1,18 @@
-import { Router } from 'express';
-import v1 from './version-1';
+import { Router } from "express"
+import v1 from "./version-1.js"
 
 export default ({ config }) => {
-	let api = Router();
+  let api = Router()
 
-	api.use('/v1', v1())
+  api.use("/v1", v1())
 
-	api.get('/', (req, res) => {
-		res.json({
-			seed: "/api/v1/:seed[0-14]",
-			name: '/api/v1/:name',
-			random: '/api/v1/random'
-		});
-	});
+  api.get("/", (req, res) => {
+    res.json({
+      seed: "/api/v1/:seed[0-14]",
+      name: "/api/v1/:name",
+      random: "/api/v1/random"
+    })
+  })
 
-	return api;
+  return api
 }
