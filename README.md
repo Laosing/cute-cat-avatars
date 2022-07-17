@@ -73,14 +73,6 @@ You can query a specific cat or a string to get a random cat.
 - <img src="https://raw.githubusercontent.com/Laosing/cute-cat-avatars/master/assets/img/groups.png" width="100" height="100"> groups
 - <img src="https://raw.githubusercontent.com/Laosing/cute-cat-avatars/master/assets/img/cat.png" width="100" height="100"> cat
 
-### Built With
-
-- [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-- [Node.js](https://nodejs.org/) - JavaScript on the Server
-- [Mocha](https://mochajs.org/) - JavaScript test framework for Node.js programs
-- [Heroku](https://www.heroku.com/) - Operate applications entirely in the cloud.
-- [TravisCI](https://travis-ci.org/) - Test and Deploy with Confidence
-
 ### License
 
 MIT
