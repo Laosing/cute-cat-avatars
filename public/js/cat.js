@@ -2,24 +2,16 @@ const cat = new Vue({
     el: '#cat',
     data () {
         return {
-            catSrc: `<img src="static/img/api/award.svg" />`,
-            cats: [
-                "announcer",
-                "art",
-                "award",
-                "book",
-                "bug",
-                "cat",
-                "comic",
-                "gaming",
-                "general",
-                "groups",
-                "idea",
-                "news",
-                "support",
-                "tv",
-            ]
+            catSrc: `<img src="img/api/award.svg" />`,
+            cats: []
         }
+    },
+    mounted() {
+        fetch('./api/v1/cats')
+            .then(res => res.json())
+            .then(data => {
+                this.cats = data
+            })
     },
     methods: {
         getCat(e) {
@@ -46,7 +38,7 @@ const cat = new Vue({
                 id = id % this.cats.length;
             }
             let catName = this.cats[id];
-            return `<img class="w-100 img-fluid" src="static/img/api/${catName}.svg" />`
+            return `<img class="w-100 img-fluid" src="img/api/${catName}.svg" />`
         }
     },
 })

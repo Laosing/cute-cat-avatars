@@ -1,0 +1,9 @@
+name = "cute-cat-avatars"
+main = "src/index.ts"
+compatibility_date = "2025-12-10"
+compatibility_flags = ["nodejs_compat"]
+
+# Serve static assets from public folder
+[assets]
+directory = "./public"
+binding = "ASSETS"
