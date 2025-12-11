@@ -4,3 +4,11 @@
 /node_modules
 .DS_Store
 /coverage
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Bun
+.env
+test-results/
