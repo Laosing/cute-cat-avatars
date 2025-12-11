@@ -7,12 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/dist/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="static/img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
@@ -21,7 +21,7 @@
 </head>
 <body>
     <div class="banner mb-3">
-        <img src="static/img/banner.svg" title="" class="w-100">
+        <img src="img/banner.svg" title="" class="w-100">
     </div>
     <main id="main" class="pt-5">
         <section class="">
@@ -42,7 +42,7 @@
                                     <p class="fs-16 text-gray-soft">Cute Cat Avatars are colorful cats illustrated by <a class="text-primary" href="http://andrewrattana.com">Drew Rattana</a> that can be used as profile picture placeholders for live websites or design mock ups. Made in SVG format for a crisp image with super fast load times on every device.</p>
                                 </div>
                                 <div class="col-lg-12 mb-5">
-                                    <img class="img-fluid mx-auto" src="static/img/what-is-this.png">
+                                    <img class="img-fluid mx-auto" src="img/what-is-this.png">
                                 </div>
                             </div>
                         </div>
@@ -56,13 +56,13 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6 col-12 mb-4">
                         <h2 class="mb-2 text-bold w-75">How to use</h2>
-                        <p class="fs-16 text-gray-soft">You can easily use these cats in img tags or http requests, the response will be a cat in <span class="text-primary">Content-Type: image/svg+xml</span>. The url to request is <span class="text-primary">https://cute-cat-avatars.fly.dev/api/v1/:seed</span> for example:</p>
+                        <p class="fs-16 text-gray-soft">You can easily use these cats in img tags or http requests, the response will be a cat in <span class="text-primary">Content-Type: image/svg+xml</span>. The url to request is <span class="text-primary">https://cute-cat-avatars.laosing-cors.workers.dev/api/v1/:seed</span> for example:</p>
                     </div>
                     <div class="col-12">
                         <h5>HTML</h5>
-                        <pre><code>&lt;img src=&quot;https://cute-cat-avatars.fly.dev/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
+                        <pre><code>&lt;img src=&quot;https://cute-cat-avatars.laosing-cors.workers.dev/api/v1/announcer&quot; alt=&quot;Cute announcer cat&quot;&gt;</code></pre>
                         <h5>Javascript</h5>
-                        <pre><code>fetch('https://cute-cat-avatars.fly.dev/api/v1/random')
+                        <pre><code>fetch('https://cute-cat-avatars.laosing-cors.workers.dev/api/v1/random')
     .then(function(response) {
         document.getElementById('cat').src = response.url;
     })</code></pre>
@@ -75,17 +75,17 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-between mb-5 pt-5 mb-lg-3 text-center">
                         <div class="col-sm-4 px-sm-4 pb-5">
-                            <img class="w-100" src="static/img/api/award.svg">
+                            <img class="w-100" src="img/api/award.svg">
                             <h5 class="my-2 text-bold">Extremely cute</h5>
                             <p class="text-gray-soft">Each cat is unique and easily distinguishable.</p>
                         </div>
                         <div class="col-sm-4 px-sm-4 pb-5">
-                            <img class="w-100 img-fluid" src="static/img/api/groups.svg">
+                            <img class="w-100 img-fluid" src="img/api/groups.svg">
                             <h5 class="my-2 text-bold">Tons of variety</h5>
                             <p class="text-gray-soft">There are 14 cats in total, you'll be sure to find one that suits you.</p>
                         </div>
                         <div class="col-sm-4 px-sm-4 pb-5">
-                            <img class="w-100 img-fluid" src="static/img/api/art.svg">
+                            <img class="w-100 img-fluid" src="img/api/art.svg">
                             <h5 class="my-2 text-bold">Free to use </h5>
                             <p class="text-gray-soft">These cats are free to use in both personal and commercial projects.</p>
                         </div>
@@ -96,7 +96,7 @@
             <section class="bg-gray-light py-1">
                 <div class="container">
                     <div class="row align-items-top justify-content-between mt-5 my-lg-5 pt-5">
-                        <div class="col-lg-4 col-12 mb-4 mt-4"><img class="img-fluid mx-auto d-block" src="static/img/logo.png" class="w-100 img-fluid"></div>
+                        <div class="col-lg-4 col-12 mb-4 mt-4"><img class="img-fluid mx-auto d-block" src="img/logo.png" class="w-100 img-fluid"></div>
                         <div class="col-lg-8 col-12 mb-3 mb-lg-5">
                             <h2 class="mb-2 text-bold w-75">Pick your cat</h2>
                             <p class="fs-16 text-gray-soft mb-5">There are multiple ways you can query for a cute cat. The same <span class="text-primary">:seed</span> will always return the same cat.</p>
@@ -127,7 +127,7 @@
                                 <label for="basic-url">Type in a cat to see how it works</label>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon3">https://cute-cat-avatars.fly.dev/api/v1/</span>
+                                        <span class="input-group-text" id="basic-addon3">https://cute-cat-avatars.laosing-cors.workers.dev/api/v1/</span>
                                     </div>
                                     <input type="text" class="form-control" id="basic-url" value="award" @keyup="getCat" placeholder="<seed>" class="cat-input">
                                     </div>
@@ -142,59 +142,59 @@
                                 <h2 class="my-2 text-bold">Try them all</h2>
                                 <div class="row align-items-center mb-5 pt-5 mb-lg-3 text-center">
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/announcer.svg">
+                                        <img class="w-100 img-fluid" src="img/api/announcer.svg">
                                         <strong>announcer</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/art.svg">
+                                        <img class="w-100 img-fluid" src="img/api/art.svg">
                                         <strong>art</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/award.svg">
+                                        <img class="w-100 img-fluid" src="img/api/award.svg">
                                         <strong>award</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/book.svg">
+                                        <img class="w-100 img-fluid" src="img/api/book.svg">
                                         <strong>book</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/bug.svg">
+                                        <img class="w-100 img-fluid" src="img/api/bug.svg">
                                         <strong>bug</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/cat.svg">
+                                        <img class="w-100 img-fluid" src="img/api/cat.svg">
                                         <strong>cat</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/comic.svg">
+                                        <img class="w-100 img-fluid" src="img/api/comic.svg">
                                         <strong>comic</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/gaming.svg">
+                                        <img class="w-100 img-fluid" src="img/api/gaming.svg">
                                         <strong>gaming</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/general.svg">
+                                        <img class="w-100 img-fluid" src="img/api/general.svg">
                                         <strong>general</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/groups.svg">
+                                        <img class="w-100 img-fluid" src="img/api/groups.svg">
                                         <strong>groups</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/idea.svg">
+                                        <img class="w-100 img-fluid" src="img/api/idea.svg">
                                         <strong>idea</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/news.svg">
+                                        <img class="w-100 img-fluid" src="img/api/news.svg">
                                         <strong>news</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/support.svg">
+                                        <img class="w-100 img-fluid" src="img/api/support.svg">
                                         <strong>support</strong>
                                     </div>
                                     <div class="col-6 col-md-2 mb-4">
-                                        <img class="w-100 img-fluid" src="static/img/api/tv.svg">
+                                        <img class="w-100 img-fluid" src="img/api/tv.svg">
                                         <strong>tv</strong>
                                     </div>
                                 </div>
@@ -222,6 +222,6 @@
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            <script src="static/dist/js/cat.js"></script>
+            <script src="js/cat.js"></script>
         </body>
         </html>
